@@ -15,5 +15,12 @@ app.use(express.static("public")); // to serve static files from public folder
 app.use(cookieParser()); // to parse cookies from the request headers
 
 
+// routes import
+import userRouter from './routes/user.routes.js'
+
+// routes declaration
+app.use("/api/v1/users", userRouter)
+
+
 
 export {app}; // export default app
